@@ -145,6 +145,8 @@ const DonorEditProfile = () => {
           onChange={handleChange}
           placeholder="Phone"
           className="w-full p-3 border rounded"
+          required
+          maxLength={10}
         />
 
         {/* AGE */}
@@ -155,6 +157,8 @@ const DonorEditProfile = () => {
           onChange={handleChange}
           placeholder="Age"
           className="w-full p-3 border rounded"
+          required
+
         />
 
         {/* GENDER */}
@@ -165,6 +169,7 @@ const DonorEditProfile = () => {
           onChange={handleChange}
           placeholder="Gender"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* BLOOD GROUP */}
@@ -175,6 +180,7 @@ const DonorEditProfile = () => {
           onChange={handleChange}
           placeholder="Blood Group"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* ORGANS */}
@@ -205,6 +211,7 @@ const DonorEditProfile = () => {
           onChange={handleChange}
           placeholder="State"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* DISTRICT */}
@@ -215,6 +222,7 @@ const DonorEditProfile = () => {
           onChange={handleChange}
           placeholder="District"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* GOOGLE MAP */}

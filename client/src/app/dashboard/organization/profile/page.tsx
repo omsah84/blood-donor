@@ -149,6 +149,7 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="Hospital Name"
           className="w-full p-3 border rounded"
+          required
         />
 
         <input
@@ -158,6 +159,8 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="Contact Person"
           className="w-full p-3 border rounded"
+          required
+          maxLength={10}
         />
 
         <input
@@ -167,6 +170,8 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="Phone"
           className="w-full p-3 border rounded"
+          required
+          maxLength={10}
         />
 
         <input
@@ -176,6 +181,7 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="Website"
           className="w-full p-3 border rounded"
+          
         />
 
         {/* LOCATION */}
@@ -186,6 +192,7 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="Address"
           className="w-full p-3 border rounded"
+          required
         />
 
         <input
@@ -195,6 +202,7 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="State"
           className="w-full p-3 border rounded"
+          required
         />
 
         <input
@@ -204,6 +212,7 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="District"
           className="w-full p-3 border rounded"
+          required
         />
 
         <input
@@ -213,6 +222,7 @@ const OrganizationEditProfile = () => {
           onChange={handleChange}
           placeholder="Google Maps Link"
           className="w-full p-3 border rounded"
+          required
         />
 
         <button

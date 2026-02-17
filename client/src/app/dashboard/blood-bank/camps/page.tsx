@@ -145,6 +145,7 @@ export default function CampsPage() {
             onChange={handleChange}
             placeholder="State"
             className="w-full border px-4 py-2 rounded"
+            required
           />
           <input
             type="text"
@@ -153,6 +154,7 @@ export default function CampsPage() {
             onChange={handleChange}
             placeholder="District"
             className="w-full border px-4 py-2 rounded"
+            required
           />
         </div>
         <input
@@ -161,6 +163,7 @@ export default function CampsPage() {
           value={form.googleMapLink}
           onChange={handleChange}
           placeholder="Google Map Link"
+          required
           className="w-full border px-4 py-2 rounded"
         />
         <div className="flex gap-4">

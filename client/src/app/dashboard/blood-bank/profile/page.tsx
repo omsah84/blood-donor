@@ -135,6 +135,8 @@ const BloodBankEditProfile = () => {
           onChange={handleChange}
           placeholder="Phone"
           className="w-full p-3 border rounded"
+          required
+          maxLength={10}
         />
 
         {/* Website */}
@@ -165,6 +167,7 @@ const BloodBankEditProfile = () => {
           onChange={handleChange}
           placeholder="Address"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* State */}
@@ -175,6 +178,7 @@ const BloodBankEditProfile = () => {
           onChange={handleChange}
           placeholder="State"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* District */}
@@ -185,6 +189,7 @@ const BloodBankEditProfile = () => {
           onChange={handleChange}
           placeholder="District"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* Google Maps Link */}
@@ -195,6 +200,7 @@ const BloodBankEditProfile = () => {
           onChange={handleChange}
           placeholder="Google Maps Link"
           className="w-full p-3 border rounded"
+          required
         />
 
         <button

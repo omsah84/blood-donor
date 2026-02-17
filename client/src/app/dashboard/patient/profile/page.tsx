@@ -149,6 +149,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="Phone"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* Age */}
@@ -159,6 +160,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="Age"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* Gender */}
@@ -169,6 +171,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="Gender"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* Blood Group */}
@@ -179,6 +182,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="Blood Group"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* Organs */}
@@ -199,6 +203,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="Address"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* State */}
@@ -209,6 +214,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="State"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* District */}
@@ -219,6 +225,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="District"
           className="w-full p-3 border rounded"
+          required
         />
 
         {/* Google Maps Link */}
@@ -229,6 +236,7 @@ const PatientEditProfile = () => {
           onChange={handleChange}
           placeholder="Google Maps Link"
           className="w-full p-3 border rounded"
+          
         />
 
         <button

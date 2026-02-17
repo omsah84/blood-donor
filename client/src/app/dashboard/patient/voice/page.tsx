@@ -284,7 +284,7 @@ const PatientRequestCombined = () => {
             </h3>
             <textarea
               className="w-full border p-2 rounded mb-4"
-              placeholder="Optional message"
+              placeholder="Requirement(unit and name)"
               value={modalMessage}
               onChange={(e) =>
                 setModalMessage(e.target.value)

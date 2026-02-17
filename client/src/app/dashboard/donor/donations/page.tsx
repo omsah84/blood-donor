@@ -10,6 +10,8 @@ interface Recipient {
   address?: string;
   state?: string;
   district?: string;
+  googleMapLink?: string;
+  phone?: string;
 }
 
 interface Request {
@@ -46,7 +48,7 @@ const MyRequests = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/requests/user/${userId}`
+        `http://localhost:5000/api/requests/user/${userId}`,
       );
       setRequests(res.data);
     } catch (err) {
@@ -80,6 +82,19 @@ const MyRequests = () => {
               <h4 className="font-semibold">
                 {req.recipientId.name} ({req.recipientId.role})
               </h4>
+
+              {req.recipientId.googleMapLink && (
+                <a
+                  href={req.recipientId.googleMapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-blue-600 font-semibold underline bg-blue-100 px-3 py-1.5 rounded-md hover:bg-blue-200 hover:text-blue-800 transition duration-200"
+                >
+                  📍 Map Link
+                </a>
+              )}
+
+              {req.recipientId.phone && <p>Phone: {req.recipientId.phone}</p>}
               {req.recipientId.address && (
                 <p>
                   {req.recipientId.address}, {req.recipientId.district},{" "}
@@ -94,8 +109,8 @@ const MyRequests = () => {
                     req.status === "approved"
                       ? "text-green-600"
                       : req.status === "rejected"
-                      ? "text-red-600"
-                      : "text-yellow-600"
+                        ? "text-red-600"
+                        : "text-yellow-600"
                   }`}
                 >
                   {req.status}

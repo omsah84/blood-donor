@@ -9,7 +9,7 @@ export default function Footer(): JSX.Element {
         {/* Brand */}
         <div>
           <h2 className="text-lg font-bold flex items-center gap-2">
-            🩸 BloodConnect
+            🩸 DonorBridgeConnect
           </h2>
           <p className="text-sm mt-2 text-red-100">
             Connecting patients, donors, and organizations to save lives
@@ -41,7 +41,7 @@ export default function Footer(): JSX.Element {
 
       {/* Bottom */}
       <div className="border-t border-red-700 text-center text-xs py-3 text-red-100">
-        © {new Date().getFullYear()} BloodConnect
+        © {new Date().getFullYear()} DonorBridgeConnect
       </div>
     </footer>
   );

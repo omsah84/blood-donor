@@ -78,6 +78,7 @@ const OrganizationFullDashboard = () => {
   const bloodOutgoing = outgoing.filter(r => r.type === "blood");
 
   const approvedCount = incoming.filter(r => r.status === "approved").length;
+  const rejectedCount = incoming.filter(r => r.status === "rejected").length;
   const pendingCount = incoming.filter(r => r.status === "pending").length;
 
   /* ================= Approve / Reject ================= */
@@ -125,6 +126,12 @@ const OrganizationFullDashboard = () => {
             {approvedCount}
           </p>
         </div>
+        <div className="p-4 bg-green-100 rounded shadow">
+          <p>Rejected</p>
+          <p className="text-2xl font-bold text-green-600">
+            {rejectedCount}
+          </p>
+        </div>
 
         <div className="p-4 bg-yellow-100 rounded shadow">
           <p>Pending</p>
@@ -151,7 +158,7 @@ const OrganizationFullDashboard = () => {
 
       {/* ================= Incoming ================= */}
       <h3 className="text-xl font-semibold mb-4">
-        Incoming Requests (Patients)
+        Incoming Requests
       </h3>
 
       {incoming.map(req => {
@@ -201,7 +208,7 @@ const OrganizationFullDashboard = () => {
 
       {/* ================= Outgoing ================= */}
       <h3 className="text-xl font-semibold mt-10 mb-4">
-        Sent Requests (To Blood Banks)
+        Sent Requests
       </h3>
 
       {bloodOutgoing.map(req => (
