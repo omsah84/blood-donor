@@ -1,0 +1,152 @@
+[
+  {
+    "response_type": "greeting",
+    "user_input": ["hello", "hi", "hey"],
+    "bot_response": "Hello! Welcome to BloodCare AI. How can I assist you today?",
+    "required_words": []
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["good", "morning"],
+    "bot_response": "Good morning! Ready to donate or need information about blood banks?",
+    "required_words": ["good", "morning"]
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["good", "afternoon"],
+    "bot_response": "Good afternoon! How can I help with your blood donation or request?",
+    "required_words": ["good", "afternoon"]
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["good", "evening"],
+    "bot_response": "Good evening! Do you want to donate blood or check blood availability?",
+    "required_words": ["good", "evening"]
+  },
+  {
+    "response_type": "greeting",
+    "user_input": ["what's", "up"],
+    "bot_response": "Not much, just here to help you with blood donation, requests, or hospital info!",
+    "required_words": ["what's", "up"]
+  },
+  {
+    "response_type": "donor_info",
+    "user_input": ["i", "want", "to", "donate", "blood"],
+    "bot_response": "Thank you for your willingness to donate! Can you tell me your blood type and location?",
+    "required_words": ["donate", "blood"]
+  },
+  {
+    "response_type": "donor_info",
+    "user_input": ["how", "can", "i", "become", "a", "donor"],
+    "bot_response": "You can register as a blood donor through our portal or visit the nearest blood bank. Would you like the registration link?",
+    "required_words": ["become", "donor"]
+  },
+  {
+    "response_type": "donor_info",
+    "user_input": ["blood", "donation", "eligibility"],
+    "bot_response": "To donate, you should be 18–65 years old, weigh over 50kg, and be in good health. Check full eligibility on our site.",
+    "required_words": ["eligibility"]
+  },
+  {
+    "response_type": "donor_info",
+    "user_input": ["nearest", "blood", "bank"],
+    "bot_response": "Please share your city or ZIP code, and I can locate the nearest blood bank for you.",
+    "required_words": ["nearest", "blood", "bank"]
+  },
+  {
+    "response_type": "patient_info",
+    "user_input": ["i", "need", "blood"],
+    "bot_response": "We can help! Please specify the blood type and your location for immediate assistance.",
+    "required_words": ["need", "blood"]
+  },
+  {
+    "response_type": "patient_info",
+    "user_input": ["emergency", "blood", "required"],
+    "bot_response": "Emergency noted! Share the hospital name and blood type, and we will connect you with available donors immediately.",
+    "required_words": ["emergency", "blood"]
+  },
+  {
+    "response_type": "patient_info",
+    "user_input": ["blood", "availability"],
+    "bot_response": "Please provide your location and blood type to check current availability in nearby blood banks.",
+    "required_words": ["blood", "availability"]
+  },
+  {
+    "response_type": "patient_info",
+    "user_input": ["hospital", "blood", "request"],
+    "bot_response": "We can forward your request to nearby donors and blood banks. Provide hospital details and required units.",
+    "required_words": ["hospital", "blood", "request"]
+  },
+  {
+    "response_type": "appointment",
+    "user_input": ["book", "blood", "donation"],
+    "bot_response": "You can schedule a donation at your preferred blood bank. Share your date and location.",
+    "required_words": ["book", "blood", "donation"]
+  },
+  {
+    "response_type": "appointment",
+    "user_input": ["schedule", "donation", "appointment"],
+    "bot_response": "Sure! Please provide your preferred date and nearest blood bank for booking.",
+    "required_words": ["schedule", "donation"]
+  },
+  {
+    "response_type": "appointment",
+    "user_input": ["cancel", "donation", "appointment"],
+    "bot_response": "No problem. Please share your booking details and we’ll cancel the appointment.",
+    "required_words": ["cancel", "donation"]
+  },
+  {
+    "response_type": "emergency",
+    "user_input": ["urgent", "blood", "needed"],
+    "bot_response": "Emergency! Please provide blood type, hospital, and contact info. We’ll notify nearby donors immediately.",
+    "required_words": ["urgent", "blood"]
+  },
+  {
+    "response_type": "emergency",
+    "user_input": ["blood", "needed", "now"],
+    "bot_response": "Immediate action! Share your blood type and location, and we’ll connect you with available donors.",
+    "required_words": ["blood", "now"]
+  },
+  {
+    "response_type": "faq",
+    "user_input": ["who", "can", "donate", "blood"],
+    "bot_response": "Healthy individuals aged 18–65 and weighing over 50kg can donate, subject to eligibility criteria.",
+    "required_words": ["who", "donate"]
+  },
+  {
+    "response_type": "faq",
+    "user_input": ["how", "often", "can", "i", "donate"],
+    "bot_response": "You can donate whole blood every 3 months, platelets every 2 weeks, and plasma every 28 days.",
+    "required_words": ["how", "often", "donate"]
+  },
+  {
+    "response_type": "faq",
+    "user_input": ["side", "effects", "blood", "donation"],
+    "bot_response": "Mild dizziness or bruising may occur. Staying hydrated and resting after donation helps recovery.",
+    "required_words": ["side", "effects"]
+  },
+  {
+    "response_type": "faq",
+    "user_input": ["preparation", "for", "donation"],
+    "bot_response": "Eat a healthy meal, stay hydrated, and avoid alcohol before donating blood.",
+    "required_words": ["preparation", "donation"]
+  },
+  {
+    "response_type": "contact_info",
+    "user_input": ["contact", "blood", "bank"],
+    "bot_response": "You can reach the nearest blood bank via email at info@bloodbank.org or call +1-800-555-1234.",
+    "required_words": ["contact", "blood", "bank"]
+  },
+  {
+    "response_type": "contact_info",
+    "user_input": ["support", "help"],
+    "bot_response": "Our support team is available 24/7 to assist donors and patients. Email: support@bloodcare.org",
+    "required_words": ["support"]
+  },
+  {
+    "response_type": "contact_info",
+    "user_input": ["talk", "to", "someone"],
+    "bot_response": "You can speak with our coordinators by calling +1-800-555-1234.",
+    "required_words": ["talk", "someone"]
+  }
+]
