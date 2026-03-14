@@ -14,12 +14,17 @@ import campRoutes from "./routes/campRoutes.js"
 
 
 dotenv.config();
-connectDB();
-
 const app = express();
 
-app.use(cors());
+app.use(
+    cors({
+        origin: [process.env.CORS_ORIGIN],
+        credentials: true,
+    })
+);
 app.use(express.json());
+
+connectDB();
 
 
 app.use("/api/auth", authRoutes);
@@ -28,8 +33,8 @@ app.use("/api/patient", patientRoutes);
 app.use("/api/donor", donorRoutes);
 app.use("/api/blood-bank", bloodBankRoutes);
 app.use("/api/requests", requestRoutes);
-app.use("/api/users", userRoutes);  
-app.use("/api/camps", campRoutes); 
+app.use("/api/users", userRoutes);
+app.use("/api/camps", campRoutes);
 
 
 const PORT = process.env.PORT || 5000;
