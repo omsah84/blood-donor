@@ -6,28 +6,37 @@ export const signup = async (req, res) => {
   try {
     const { name, email, phone, password, role } = req.body;
 
-    // Require either email or phone
+    // Validate required fields
     if (!name || (!email && !phone) || !password || !role) {
-      return res.status(400).json({ message: "Name, password, role, and either email or phone are required" });
+      return res.status(400).json({
+        message: "Name, password, role, and either email or phone are required",
+      });
     }
 
-    // Check if user already exists with same email or phone for the role
-    const userExists = await User.findOne({
-      role,
-      $or: [
-        { email: email || null },
-        { phone: phone || null }
-      ]
-    });
+    // Build dynamic query (ONLY include provided fields)
+    const query = { role, $or: [] };
+
+    if (email) {
+      query.$or.push({ email });
+    }
+
+    if (phone) {
+      query.$or.push({ phone });
+    }
+
+    // Check if user already exists
+    const userExists = await User.findOne(query);
 
     if (userExists) {
-      return res.status(400).json({ message: "User with this email or phone already exists" });
+      return res.status(400).json({
+        message: "User with this email or phone already exists",
+      });
     }
 
-    // Hash the password
+    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create the user
+    // Create user
     const user = await User.create({
       name,
       email: email || null,
@@ -36,6 +45,7 @@ export const signup = async (req, res) => {
       role,
     });
 
+    // Response
     res.status(201).json({
       message: "Signup successful",
       user: {
@@ -44,7 +54,7 @@ export const signup = async (req, res) => {
         email: user.email,
         phone: user.phone,
         role: user.role,
-        profileStatus: user.profileStatus, // <-- added profile status
+        profileStatus: user.profileStatus,
       },
     });
   } catch (error) {
